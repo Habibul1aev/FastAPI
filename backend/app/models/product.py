@@ -1,12 +1,12 @@
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from backend.database import Base
+from database import Base
 from datetime import datetime
 
 class Product(Base):
     __tablename__ = 'products'
 
-    id = Column(Integer, primery_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False, index=True)
     description = Column(Text)
     price = Column(Float, nullable=False)
