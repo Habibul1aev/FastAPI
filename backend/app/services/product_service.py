@@ -6,7 +6,7 @@ from app.schemas.product import ProductResponse, ProductCreate, ProductListRespo
 from fastapi import HTTPException, status
 
 
-class CategoryServise:
+class ProductService:
     def __init__(self, db: Session):
         self.product_repository = ProductRepository(db)
         self.category_repository = CategoryRepository(db)
