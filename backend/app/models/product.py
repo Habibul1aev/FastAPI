@@ -13,7 +13,7 @@ class Product(Base):
     category_id = Column(Integer, ForeignKey('categories.id'), nullable=False)
     image_url = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
-    products = relationship('Product', back_populates='category')
+    # products = relationship('Product', back_populates='category')
 
     category = relationship('Category', back_populates='products')
 
